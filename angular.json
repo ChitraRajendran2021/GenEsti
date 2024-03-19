@@ -62,6 +62,9 @@
             "production": {
               "browserTarget": "GenEsti:build:production"
             },
+            "options": {
+              "disableHostCheck": true
+            },
             "development": {
               "browserTarget": "GenEsti:build:development"
             }
