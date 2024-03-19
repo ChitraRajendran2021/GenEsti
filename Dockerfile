@@ -1,11 +1,11 @@
 # Use the official Nginx image as the base image
-FROM nginx:alpine
+FROM node:alpine
+WORKDIR /usr/src/app
 
-# Copy the built Angular app from the host machine to the container
-COPY dist/gen-esti /usr/share/nginx/html
+COPY . /usr/src/app
 
-# Expose port 80 to the outside world
-EXPOSE 80
+RUN npm install -g @angular/cli
 
-# Start Nginx server when the container starts
-CMD ["nginx", "-g", "daemon off;"]
+RUN npm install
+
+CMD ["ng", "serve", "--host", "0.0.0.0"]
