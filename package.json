@@ -1,6 +1,6 @@
 {
   "name": "gen-esti",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.0",
