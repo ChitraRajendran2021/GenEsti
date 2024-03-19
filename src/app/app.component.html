@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  
+  <label for="imageInput" class="upload-btn">Upload Image</label>
+  <input type="file" id="imageInput" accept="image/*" (change)="fileChanged($event)"><br><br>
+
+  <div *ngIf="imageData">
+      <img [src]="imageData" alt="Uploaded Image" style="max-width: 300px;">
+  </div>
+  
+  <button class="predict-btn"  data-toggle="modal" data-target="#predictionsModal" (click)="predict()" [disabled]="!imageData">Predict</button><br><br>
+
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="predictionsModal" tabindex="-1" role="dialog" aria-labelledby="predictionsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="predictionsModalLabel">Predictions</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Category</th>
+              <th scope="col">Confidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Loading spinner -->
+            <div id="loading" *ngIf="loading">Loading...</div>
+            <tr *ngFor="let prediction of predictions">
+              <td>{{ prediction.ItemName }}</td>
+              <td>{{ prediction.LabourCharge }}</td>
+              <td>{{ prediction.InsuranceEligibility }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
