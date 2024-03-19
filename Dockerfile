@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Copy the production-ready Angular app to the Nginx webserver's root directory
-COPY --from=build /dist/gen-esti /usr/share/nginx/html
+COPY /dist/gen-esti /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
