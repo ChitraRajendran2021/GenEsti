@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AutoML Predictions';
+  title = 'GenEsti - An AutoAid EstimateAssistant';
   predictions: any[] = [];
   loading: boolean = false;
   imageData: string | ArrayBuffer | null = null;
