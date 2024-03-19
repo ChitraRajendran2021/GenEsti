@@ -1,11 +1,10 @@
-# Use a smaller, production-ready image as the final image
-FROM nginx:alpine
+# Use the official Nginx image as the base image
+FROM node:alpine
+WORKDIR /usr/src/app
 
-# Copy the production-ready Angular app to the Nginx webserver's root directory
-COPY /dist/gen-esti /usr/share/nginx/html
+COPY . /usr/src/app
 
-# Expose port 80
-EXPOSE 80
-
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+RUN npm install -g @angular/cli
+RUN NODE_OPTIONS=--max-old-space-size=8192
+RUN npm install
+CMD ["ng", "serve"]
