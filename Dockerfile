@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Copy the built Angular app from the host machine to the container
-COPY dist/gen-esti /usr/share/nginx/html
+COPY estigen.tar.gz /usr/share/nginx/html
 
 # Expose port 80 to the outside world
 EXPOSE 80
