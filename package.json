@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "export NODE_OPTIONS=--openssl-legacy-provider && ng serve -c local_docker --live-reload",
+    "start": "ng serve -c local_docker --live-reload",
     "local_docker": "ng serve -c local_docker ",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider && ng build --prod -c production",
+    "build": "ng build --prod -c production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
