@@ -58,14 +58,17 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "disableHostCheck": true
+          },
           "configurations": {
             "production": {
               "browserTarget": "GenEsti:build:production"
             },
-            "options": {
-              "disableHostCheck": true
-            },
             "development": {
+              "browserTarget": "GenEsti:build:development"
+            },
+            "local_docker": {
               "browserTarget": "GenEsti:build:development"
             }
           },
