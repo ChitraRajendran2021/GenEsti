@@ -15,8 +15,8 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015", // Change the target to a valid value like "es2015", "es2016", "es2017", etc.
-    "module": "commonjs", // Change the module to a valid value like "commonjs", "umd", "es6", etc.
+    "target": "es2018",
+    "module": "es2020",
     "useDefineForClassFields": false,
     "lib": [
       "es2015",
