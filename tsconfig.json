@@ -21,12 +21,10 @@
     "lib": [
       "es2015",
       "dom"
-    ],
-    "files": [
-      "src/polyfills.ts"
     ]
   },
   "include": [
+    "src/polyfills.ts",
     "src"
   ],
   "angularCompilerOptions": {
