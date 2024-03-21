@@ -24,7 +24,6 @@
     ]
   },
   "include": [
-    "src/polyfills.ts",
     "src"
   ],
   "angularCompilerOptions": {
